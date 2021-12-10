@@ -1,0 +1,9 @@
+body {
+  background-image: url("../img/pizzaplanetbg.jpg");
+  background-size: cover
+}
+
+.header {
+  color: #6C975F;
+  text-shadow: 2px 2px#6BC0D6;
+}
