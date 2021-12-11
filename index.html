@@ -9,8 +9,32 @@
   <Title>Pizza Parlor</Title>
 </head>
 <body>
+
   <h1 class="header">Pizza Planet</h1>
+  <h3 class="header">Please select your pizza size and 1 Topping below</h3>
   
+  <div class="selectboxsize">
+    <label for="pizzaSize"><strong>Size:</strong></label>
+    <select name="pizzaSize" id="pizzaSize">
+      <option value="">Please Select a Size</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">large</option>
+    </select>
+  </div>
+
+  <div class="checkboxtoppings">
+    <input type="checkbox" id="mushrooms" name="mushrooms" value=1>
+    <label for="mushrooms">Mushrooms</label><br>
+    <input type="checkbox" id="garlic" name="garlic" value=1>
+    <label for="garlic">Garlic</label><br>
+    <input type="checkbox" id="onions" name="onions" value=1>
+    <label for="onions">Onions</label><br>
+    <input type="checkbox" id="peppers" name="peppers" value=1>
+    <label for="peppers">Peppers</label><br>
+  </div>
+  
+
 </body>
 
 </html>

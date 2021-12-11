@@ -9,9 +9,9 @@ This project is an epicodus project, it will allow users to select pizza and top
 
 ## Specifications
 
-Describe: const pizza
-Input: pizza.size[0]; pizza.toppings[0]
-Output: "small", "mushrooms"
+Describe: Pizza()
+Input: Pizza.size("small")
+Output: 11
 
 Describe:
 Input:
