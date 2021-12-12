@@ -29,5 +29,17 @@ const minPrice = 6;
 
 Pizza.prototype.pizzaToppingPrice = function() {
   const toppingPrice = 1.50;
-  this.price += toppingPrice;
+  let checkValue = document.querySelector("#topping").checked;
+  this.price += checkValue * toppingPrice;
 }
+
+Pizza.prototype.totalPizzaPrice = function() {
+  this.pizzaSizePrice();
+  this.pizzaToppingPrice();
+}
+
+//UI logic
+
+$(document).ready(function(){
+  $("form#orderForm").submit(function(event){
+    event.preventDefault();
