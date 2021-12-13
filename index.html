@@ -14,28 +14,29 @@
   <h3 class="header">Please select your pizza size and 
     toppings below</h3>
   
-  <div class="selectboxsize">
-    <label for="pizzaSize"><strong>Size:</strong></label>
-    <select name="pizzaSize" id="pizzaSize">
-      <option value="">Please Select a Size</option>
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">large</option>
-    </select>
-  </div>
+  <form id="totalOrder">
+    <div class="selectboxsize">
+      <label for="pizzaSize"><strong>Size:</strong></label>
+      <select name="pizzaSize" id="pizzaSize">
+        <option value="">Please Select a Size</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">large</option>
+      </select>
+    </div>
 
-  <div class="checkboxtoppings">
-    <input type="checkbox" id="topping" name="toppings" value="1">
-    <label for="mushrooms">Mushrooms</label><br>
-    <input type="checkbox" id="topping" name="toppings" value="1">
-    <label for="garlic">Garlic</label><br>
-    <input type="checkbox" id="topping" name="toppings" value="1">
-    <label for="onions">Onions</label><br>
-    <input type="checkbox" id="topping" name="toppings" value="1">
-    <label for="peppers">Peppers</label><br>
-    <input class="btn btn-primary" type="submit" value="Submit">
-  </div>
-
+    <div class="checkboxtoppings">
+      <input type="checkbox" id="topping" name="toppings" value="1">
+      <label for="mushrooms">Mushrooms</label><br>
+      <input type="checkbox" id="topping" name="toppings" value="1">
+      <label for="garlic">Garlic</label><br>
+      <input type="checkbox" id="topping" name="toppings" value="1">
+      <label for="onions">Onions</label><br>
+      <input type="checkbox" id="topping" name="toppings" value="1">
+      <label for="peppers">Peppers</label><br>
+      <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+  </form>
   <p id="pizzaPrice"></p>
   
 

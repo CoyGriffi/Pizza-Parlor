@@ -6,8 +6,6 @@
 //   toppings:["mushrooms", "garlic", "onions", "peppers"]
 // }
 
-  
-  
 function Pizza(size, toppings) {
     this.size = size;
     this.toppings = toppings;
@@ -27,10 +25,11 @@ const minPrice = 6;
   }
 }
 
+
 Pizza.prototype.pizzaToppingPrice = function() {
-  const toppingPrice = 1.50;
-  let checkValue = document.querySelector("#topping").checked;
-  this.price += checkValue * toppingPrice;
+  for (let i = 0; i < this.toppings.length; i++) {
+    this.price += 1.50;
+  }
 }
 
 Pizza.prototype.totalPizzaPrice = function() {
@@ -41,7 +40,7 @@ Pizza.prototype.totalPizzaPrice = function() {
 //UI logic
 
 $(document).ready(function(){
-  $("form#orderForm").submit(function(event){
+  $("form#totalOrder").submit(function(event){
     event.preventDefault();
     const size = $("#pizzaSize").val();
       const toppings = $('input:checkbox[name=toppings]:checked').map(function() {
@@ -50,6 +49,7 @@ $(document).ready(function(){
 
       let newPizzaOrder = new Pizza(size, toppings);
       newPizzaOrder.totalPizzaPrice();
-      $("#pizzaPrice").html(`<p>Your pizza costs $${newPizzaOrder.price}</p>`);
+      $("#pizzaPrice").html(`<p>Your total is $${newPizzaOrder.price}</p>`);
   });
 });
+
