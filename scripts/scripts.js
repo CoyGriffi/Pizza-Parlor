@@ -43,3 +43,13 @@ Pizza.prototype.totalPizzaPrice = function() {
 $(document).ready(function(){
   $("form#orderForm").submit(function(event){
     event.preventDefault();
+    const size = $("#pizzaSize").val();
+      const toppings = $('input:checkbox[name=toppings]:checked').map(function() {
+        return this.value;
+      }).get();
+
+      let newPizzaOrder = new Pizza(size, toppings);
+      newPizzaOrder.totalPizzaPrice();
+      $("#pizzaPrice").html(`<p>Your pizza costs $${newPizzaOrder.price}</p>`);
+  });
+});
